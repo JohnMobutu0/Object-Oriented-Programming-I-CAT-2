@@ -50,7 +50,6 @@ The system combines these elements into a cohesive study simulation where the st
 
 ---
 
-### **How All Components Work Together**
 The `StudyAssistant` class ties the system into a cohesive experience:
 1. **Student Workflow**:
    - The student adds marks using the `addMark` method, and their final grade is displayed after calculating the average.
@@ -64,4 +63,3 @@ The `StudyAssistant` class ties the system into a cohesive experience:
 4. **Division Task Workflow**:
    - A simple division problem is solved interactively, with the system gracefully handling errors like division by zero.
 
-This system integrates OOP concepts in a practical and logical manner while respecting the instructions, forming a functional and educational learning tool for a student. Let me know if you’d like further clarification! 🚀✨
