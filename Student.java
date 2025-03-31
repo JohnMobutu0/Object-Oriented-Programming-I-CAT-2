@@ -1,6 +1,12 @@
+import java.util.ArrayList;
+
 public class Student {
     private String name;
-    private int grade;
+    private ArrayList<Integer> marks; // List to store multiple marks
+
+    public Student() {
+        marks = new ArrayList<>();
+    }
 
     public String getName() {
         return name;
@@ -10,15 +16,32 @@ public class Student {
         this.name = name;
     }
 
-    public int getGrade() {
-        return grade;
+    public void addMark(int mark) {
+        if (validateMark(mark)) {
+            marks.add(mark);
+        } else {
+            System.out.println("Invalid mark: " + mark + ". Must be between 0 and 100.");
+        }
     }
 
-    public void setGrade(int grade) {
-        if (grade >= 0 && grade <= 100) {
-            this.grade = grade;
-        } else {
-            this.grade = 0; // Default to 0 if out of range
+    public double calculateAverage() {
+        int total = 0;
+        for (int mark : marks) {
+            total += mark;
         }
+        return marks.isEmpty() ? 0 : (double) total / marks.size();
+    }
+
+    public String getGrade() {
+        double average = calculateAverage();
+        if (average >= 90) return "A";
+        if (average >= 80) return "B";
+        if (average >= 70) return "C";
+        if (average >= 60) return "D";
+        return "E";
+    }
+
+    private boolean validateMark(int mark) {
+        return mark >= 0 && mark <= 100; // Validates mark range
     }
 }
