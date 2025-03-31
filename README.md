@@ -1,7 +1,7 @@
 # Object-Oriented-Programming-I-CAT-2
 
 
-The system acts as a virtual **Study Assistant** for a student, integrating various interactive and functional components to simulate a learning environment. It accomplishes several tasks that a real-world student might encounter during their studies:
+The system acts as a virtual **Study Assistant** for a student, integrating various interactive and functional components to simulate a learning environment. It accomplishes several tasks that can happend in realuty, what a student might encounter during their studies:
 
 1. **Grading System**:
    - The student can input multiple exam or assignment marks, and the system calculates an average and assigns a grade (A, B, C, D, or E) based on the results.
